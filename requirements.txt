@@ -3,3 +3,6 @@ beautifulsoup4
 python-telegram-bot
 apscheduler
 python-dotenv
+Flask
+gunicorn
+aiohttp

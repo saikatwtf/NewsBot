@@ -1,15 +1,13 @@
 import requests
-from decouple import config
 from bs4 import BeautifulSoup
 from telegram import Bot
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 # Telegram bot token and chat ID
-TOKEN = config("BOT_TOKEN")
-CHAT_ID = config("CHAT_ID")
-  # Replace with your actual channel ID
+TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+CHAT_ID = 'YOUR_CHANNEL_ID'  # Replace with your actual channel ID
 
-# Function to scrape news from TheHindu
+# Function to scrape news from The Hindu
 def scrape_the_hindu():
     url = 'https://www.thehindu.com/news/cities/kolkata/'
     response = requests.get(url)

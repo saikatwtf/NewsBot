@@ -1,11 +1,16 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 from telegram import Bot
 from apscheduler.schedulers.blocking import BlockingScheduler
+from dotenv import load_dotenv
 
-# Telegram bot token and chat ID
-TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
-CHAT_ID = 'YOUR_CHANNEL_ID'  # Replace with your actual channel ID
+# Load environment variables from config.env
+load_dotenv('config.env')
+
+# Telegram bot token and chat ID from environment variables
+TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+CHAT_ID = os.getenv('CHAT_ID')
 
 # Function to scrape news from The Hindu
 def scrape_the_hindu():

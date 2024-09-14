@@ -15,7 +15,7 @@ CHAT_ID = os.getenv('CHAT_ID')
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(name)
+logger = logging.getLogger('main')
 
 # Function to scrape news from The Hindu
 def scrape_the_hindu():
